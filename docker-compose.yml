@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  yourgroup-php:
+    build:
+      context: ./
+    container_name: 24RP15513-php
+    ports:
+      - "8080:80" 
+    volumes:
+      - .:/var/www/html 
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
