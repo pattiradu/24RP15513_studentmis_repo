@@ -3,28 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Page for student mis</title>
-   </head>
+    <title>Registration Page for Student MIS</title>
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 400px;
+            margin-top: 50px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .text-center a {
+            text-decoration: none;
+        }
+    </style>
+</head>
 <body>
-    <div style="margin-left:30%">
-        <h2>USER REGISTRATION</h2>
+
+    <div class="container">
+        <h2 class="text-center text-primary">User Registration</h2>
         <form action="process_registration.php" method="POST">
+            <div class="mb-3">
+                <label for="fname" class="form-label">First Name</label>
+                <input type="text" name="fname" class="form-control" required>
+            </div>
 
-        <label for="fname">First Name</label><br>
-        <input type="text" name="fname" required><br>
+            <div class="mb-3">
+                <label for="lname" class="form-label">Last Name</label>
+                <input type="text" name="lname" class="form-control" required>
+            </div>
 
-            <label for="lname">Last Name</label><br>
-            <input type="text"  name="lname" required><br>
-            
-            <label for="email">Email</label><br>
-            <input type="email" name="email" required><br>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
 
-            <label for="password">Password:</label><br>
-            <input type="password" name="password" required><br>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
 
-            <button type="submit">Submit</button><br>
+            <button type="submit" class="btn btn-primary">Register</button>
         </form>
-        <p><a href="index.php">Back to Home</a></p>
+
+        <p class="text-center mt-3"><a href="index.php">Back to Home</a></p>
     </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
